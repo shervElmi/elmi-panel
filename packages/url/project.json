@@ -1,0 +1,22 @@
+{
+  "root": "packages/url",
+  "sourceRoot": "packages/url/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/url/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/url"],
+      "options": {
+        "jestConfig": "packages/url/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["URL"]
+}

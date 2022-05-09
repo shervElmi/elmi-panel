@@ -1,0 +1,28 @@
+{
+  "root": "packages/dashboard-e2e",
+  "sourceRoot": "packages/dashboard-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "packages/dashboard-e2e/cypress.json",
+        "devServerTarget": "dashboard:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "dashboard:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/dashboard-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["dashboard"]
+}

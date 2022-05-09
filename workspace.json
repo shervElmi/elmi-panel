@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "projects": {
+    "dashboard": "packages/dashboard",
+    "dashboard-e2e": "packages/dashboard-e2e",
+    "design-system": "packages/design-system",
+    "design-system-e2e": "packages/design-system-e2e",
+    "types": "packages/types",
+    "url": "packages/url",
+    "wp-dashboard": "packages/wp-dashboard"
+  }
+}

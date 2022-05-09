@@ -1,0 +1,17 @@
+{
+  // Heading style
+  "MD003": {
+    "style": "atx"
+  },
+  // Unordered list indentation
+  "MD007": {
+    "indent": 4,
+    "start_indent": 4
+  },
+  // Line length
+  "MD013": {
+    "line_length": 999,
+    "heading_line_length": 999,
+    "code_block_line_length": 999
+  }
+}

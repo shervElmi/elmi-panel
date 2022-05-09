@@ -1,0 +1,43 @@
+{
+  "root": "packages/wp-dashboard",
+  "sourceRoot": "packages/wp-dashboard/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/wp-dashboard",
+        "tsConfig": "packages/wp-dashboard/tsconfig.lib.json",
+        "project": "packages/wp-dashboard/package.json",
+        "entryFile": "packages/wp-dashboard/src/index.tsx",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "packages/wp-dashboard/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/wp-dashboard/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/wp-dashboard"],
+      "options": {
+        "jestConfig": "packages/wp-dashboard/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

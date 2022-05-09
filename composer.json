@@ -1,0 +1,42 @@
+{
+  "name": "sherv/elmi-panel",
+  "description": "Modern admin panel for WordPress.",
+  "type": "wordpress-plugin",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Sherv Elmi",
+      "email": "sherv.elmi@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/shervElmi/elmi-panel",
+  "keywords": ["WordPress Admin", "React", "Nx"],
+  "support": {
+    "issues": "https://github.com/shervElmi/elmi-panel/issues"
+  },
+  "require-dev": {
+    "automattic/vipwpcs": "^2.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "roave/security-advisories": "dev-latest",
+    "sirbrillig/phpcs-variable-analysis": "^2.11",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sherv\\Elmi_Panel\\": "includes/"
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs --severity=1",
+    "phpcbf": "phpcbf --severity=1"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "platform": {
+      "php": "7.2"
+    }
+  }
+}

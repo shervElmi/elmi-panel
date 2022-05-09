@@ -1,0 +1,11 @@
+.github
+.storybook
+assets
+bin
+build
+includes
+node_modules
+patches
+tests
+vendor
+/*.js
